@@ -1,0 +1,444 @@
+<!-- <iframe src="../QuestionGame/v/chart/13846" width="100%" height="900px" allowfullscreen="true" frameborder="0"></iframe> -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>失智友善社區</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- libraries-->
+    <style type="text/css">  @import url(http://fonts.googleapis.com/earlyaccess/cwtexyen.css);</style>
+    <script type="text/javascript" src="assets/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/d3js/3.3.11/d3.v3.min.js"></script>
+    <script type="text/javascript" src="assets/angular/1.2.3/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/3.0.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="assets/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <!-- custom files-->
+    <link rel="stylesheet" type="text/css" href="s/css/main.css">
+    <script type="text/javascript" src="assets/skrollr/skrollr.min.js"></script>
+    <script type="text/javascript" src="s/js/main.js"></script>
+    <script type="text/javascript" src="s/js/navbar.js"></script>
+    <script src="jquery.scrolline.js"></script>
+    <style type="text/css">
+      body{
+        overflow-x: hidden;
+      }
+      div{
+        font-family: cwTeXYen;
+      }
+    </style>
+  </head>
+  <body ng-app="yslin" ng-controller="main">
+  <script type="text/javascript">
+    function playPause1() { 
+        var music = document.getElementById('music1'); 
+        var music_btn = document.getElementById('music_btn1'); 
+        if (music.paused){ 
+            music.play(); 
+            music_btn.src = 'img/speaker.png'; 
+        } 
+        else{ 
+            music.pause(); 
+            music_btn.src = 'img/speaker.png';  
+        } 
+    } 
+    function playPause2() { 
+        var music = document.getElementById('music2'); 
+        var music_btn = document.getElementById('music_btn2'); 
+        if (music.paused){ 
+            music.play(); 
+            music_btn.src = 'img/speaker.png'; 
+        } 
+        else{ 
+            music.pause(); 
+            music_btn.src = 'img/speaker.png';  
+        } 
+    } 
+    function playPause3() { 
+        var music = document.getElementById('music3'); 
+        var music_btn = document.getElementById('music_btn3'); 
+        if (music.paused){ 
+            music.play(); 
+            music_btn.src = 'img/speaker.png'; 
+        } 
+        else{ 
+            music.pause(); 
+            music_btn.src = 'img/speaker.png';  
+        } 
+    }
+    $(function() {
+      $.scrolline({});
+    });
+  </script>
+    <div id="db-root"></div>
+    <div id="content">
+      <div id="land-cover">
+        <img src="img/bigtitle.png" style="width: 100%">
+      </div>
+      <div id="land-main" class="intro">
+        <div style="text-align: left;font-size: 20px;padding-right: 12%;padding-left: 12%; padding-top: 1vh; padding-bottom: 1vh">
+          <p><br><br>　　「當記憶消逝，就連找到回家的路，都成了一件困難的事。」在台灣，再過45年，失智總人口將超過800萬人，平均每天會增加36個失智症患者，會有更多人找不到回家的路。
+          現實是這麼殘酷，但許多人仍對這份深埋的隱患毫無察覺。<br>
+          　　為什麼失智人口增長如此迅速？失智症患者和他們的家屬在經受著怎樣的煎熬？湯泉失智友善社區又會從怎樣的切入點解決這些問題？
+          這份專題結合了遊戲、圖表、動畫、照片以及文字的方式，還原一個真實的台灣失智生態，和湯泉失智友善社區。
+          我們希望呼籲人們重視台灣失智現況的同時，推廣失智友善社區的理念。<br>
+          　　十分感謝中山里里長潘威志、天主教失智老人基金會社工主任陳俊佑、新北市政府衛生局視察吳玉鳳接受我們的採訪並提供相關資料。<br>
+          期待看到這份專題的人，對台灣失智症現狀和失智友善社區，能更近一步。</p><br><br>
+        </div>
+      </div>
+      <iframe src="../GoogleMapDemo/main.html" frameborder="0" style="width: 99.8%; height: 100vh ;margin: auto auto auto auto; left: 0; top: 0; right: 0; bottom: 0;"></iframe>
+
+      <div id="land-main-hl">
+          <div class="ib">
+            <div class="ib2">進入正題</div>
+          </div>
+      </div>
+      <div id="life-sh" class="section-headline">
+        <div class="main">
+          <div data-anchor-target="#life-sh" data-bottom-bottom="margin-left:40%" data-center-center="margin-left:20%" class="redline skrollable skrollable-before" style="margin-left: 40%;"></div>
+          <div id="part1" class="anchor"></div>
+          <div class="ib">
+            <div id="candle">
+              <img id="ribbon-back" src="img/divider_bar/報表.png" style="width: 120px;height: 150px" data-anchor-target="#life-sh" data-bottom-top="top:500px" data-center-center="top:80px" class="skrollable skrollable-before" style="top: 500px;">
+              <img id="candle-body" src="img/divider_bar/放大鏡.png" style="width: 120px;height: 120px" data-anchor-target="#life-sh" data-bottom-top="top:-200px" data-center-center="top:100px" class="skrollable skrollable-before" style="top: -200px;">
+            </div>
+            <div class="l4w"></div>
+            <div class="title">高齡化下的隱憂</div>
+            <div class="part">台灣失智症現狀</div> 
+          </div>
+          <div data-anchor-target="#life-sh" data-bottom-bottom="margin-left:0%" data-center-center="margin-left:20%" class="redline skrollable skrollable-before" style="margin-left: 20%;"></div>
+        </div>
+      </div>
+
+      <div style="text-align: left;font-size: 20px;margin-right: 12%;margin-left: 12%">
+        <p><br><br>
+        　　在台灣，80歲以上的老人中，每五位就有一位是失智症患者。
+        再過45年，這個數字將翻四倍，
+        而到了那時，台灣已是超高齡社會，平均每一個年輕人照顧一個老人。
+        這是我們每個人的未來，是你我必須正視的現狀。
+        </p><br><br>
+      </div>
+
+      <img src="img/article1.png" style="width: 56%;margin-right: 23%;margin-left: 23%;">
+      <img src="img/article2.png" style="width: 56%;margin-right: 23%;margin-left: 23%;">
+
+      <div id="young-sh" class="section-headline">
+        <div data-anchor-target="#young-sh" class="main">
+          <div data-anchor-target="#young-sh" data-bottom-bottom="margin-left:40%" data-center-center="margin-left:20%" class="redline skrollable skrollable-after" style="margin-left: 40%;"></div>
+          <div id="part2" class="anchor"></div>
+          <div class="ib">
+            <img data-anchor-target="#young-sh" data-bottom-top="opacity:1;margin-left:-400px;margin-top:200px" data-top-top="margin-left:-115px;margin-top:77px;opacity:1" src="img/divider_bar/爺爺.png" class="speaker skrollable skrollable-after" style="opacity: 1; margin-left: -115px; margin-top: 77px;">
+            <img data-anchor-target="#young-sh" data-bottom-top="opacity:1;margin-left:320px;margin-top:200px" data-top-top="margin-left:35px;margin-top:77px;opacity:1" src="img/divider_bar/奶奶.png" class="speaker skrollable skrollable-after" style="opacity: 1; margin-left: 35px; margin-top: 77px;">
+            <img data-anchor-target="#young-sh" data-bottom-top="opacity:1" data-center-top="opacity:1" src="img/divider_bar/houselove.png" class="microphone skrollable skrollable-after" style="opacity: 1;">
+            <div class="l4w"></div>
+            <div class="title">放心遺忘</div>
+            <div class="part">打造失智友善社區</div> 
+          </div>
+          <div data-anchor-target="#young-sh" data-bottom-bottom="margin-left:0%" data-center-center="margin-left:20%" class="redline skrollable skrollable-after" style="margin-left: 0%;"></div>
+        </div>
+      </div>
+      <div style="text-align: left;font-size: 20px;padding-right: 12%;padding-left: 12%">
+        <br><br>　　位於新店的湯泉社區是台灣第一個失智友善社區。
+        什麼是「失智友善」？這個社區長什麼樣子？如何幫助失智症患者擺脫「被囚禁」的遭遇？<br>
+        　　我們訪問了湯泉社區所在的中山里里長、新北市政府衛生局視察和天主教失智老人基金會社工
+        主任，結合影音和文字，從全方位定義失智友善社區。<br><br><br>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <iframe  style="width: 95vw; height: 95vh" src="https://www.youtube.com/embed/V2um1e-ElT0"  frameborder="0" allowfullscreen ></iframe>
+      </div>
+      <div id="land-main" class="intro">
+              <div id="land-main-hl">
+                <div class="ib">
+                  <div class="ib2">社區介紹</div>
+                </div>
+              </div>
+      </div>
+
+      <script type="text/javascript" src="s/js/young.js"></script>
+      <div id="chapter-young" ng-controller="young">
+        <div class="intro">
+        </div>
+        <div id="avatars">
+          <div ng-mouseover="tgltab(1)" ng-class="{'active':tab==1}" class="item">
+            <div class="avatar">
+              <div class="ib p1"><img src="img/dot.png"></div>
+            </div>
+          </div>
+          <div ng-mouseover="tgltab(2)" ng-class="{'active':tab==2}" class="item">
+            <div class="avatar">
+              <div class="ib p2"><img src="img/dot.png"></div>
+            </div>
+          </div>
+          <div ng-mouseover="tgltab(3)" ng-class="{'active':tab==3}" class="item">
+            <div class="avatar">
+              <div class="ib p3"><img src="img/dot.png"></div>
+            </div>
+          </div>
+          <br style="clear:both">
+
+          <div ng-class="{'show':tab==1}" class="hl-yng">
+            <div style="left: 5%" class="brief left">
+              <div class="name">潘威志</div>
+              <div class="desc"></div>
+            </div>
+            <div class="caption">新北市新店區中山里里長</div>
+          </div>
+          <div ng-class="{'show':tab==2}" class="hl-yng">
+            <div style="left: 25%" class="brief left">
+              <div class="name">陳俊佑</div>
+              <div class="desc"></div>
+            </div>
+            <div class="caption">天主教失智老人基金會社工主任</div>
+          </div>
+          <div ng-class="{'show':tab==3}" class="hl-yng">
+            <div style="left: 45%" class="brief left">
+              <div class="name">吳玉鳳</div>
+              <div class="desc"></div>
+            </div>
+            <div class="caption">新北市衛生局心理衛生及長期照護科視察</div>
+          </div>
+        </div>
+        <div id="yng-c-sep"></div>
+        <div id="yng-r-p1" ng-class="{'show':tab==1}" class="yng-r">
+          <div id="yng-p1" class="yng-p"></div>
+          <!-- <div id="yng-author-p1" class="yng-author">
+            <div class="ib right">
+              <div></div>
+              <div></div>
+            </div>
+            <div class="yng-author-mic"></div>
+          </div> -->
+          <div id="yng-d-p1" class="detail">
+            <div class="ib">
+              全國共有2600多個社區照顧關懷據點，新北市新店區中山里里長潘威志介紹，湯泉社區正在申請成為C級巷弄長照站（俗稱「長照柑仔店」），與附近的A級社區整合型服務中心耕莘醫院相配合，讓湯泉社區成為全國首例失智友善社區。<br>
+              湯泉社區管委會前主任委員陸以愷表示，2016年，湯泉社區參加衛生局舉辦的失智友善社區說明會。會後，社區管委會與里長考慮到湯泉所在的中山里已是連續多年的關懷據點，且既有的志工基礎紮實，故決定將湯泉社區打造成失智友善社區。<br>
+              「在湯泉社區，假設遇到失智老人，我們期望有幾個窗口可以解決問題」，潘威志提到，湯泉失智友善社區計畫推動至今只有2個月，難以看出很大成效，但里內頻繁舉辦志工培訓以增加社區巡邏力量，舉辦社區科普講座讓居民了解失智症患者出現的症狀。「我們和社區便利商店合作，陸續也開始店員培訓」，潘威志說，若是遇到失智長者到便利商店購物而忘付錢的情況，店員就會通知社區保全或是志工來協助。<br>
+              目前，最大的困難是許多家屬顧及老人安危，而不願讓家中的失智長者出門。如何打開家屬的心房，需要講座宣導、社區安保等，甚至搭配科技產品多管齊下。潘威志說，里內計畫推廣失智手環，失智老人就算走丟，也能透過手機定位功能迅速被找到。唯有讓失智長者邁出家門這第一道坎，失智友善社區的功能才能真正被發揮。<br> 
+              真正做到失智友善，湯泉還有很長的路要走。展望湯泉未來，「第一，我們希望做到家屬的喘息服務，第二，走進到那些在家裡沒有辦法出來的長輩的家中，讓專業的醫護人員進駐」，潘威志也希望政府的政策能夠儘快落實。<br>　
+              此外，湯泉社區內到底住著多少失智老人，目前仍是未知數。「這些失智老人有沒有經過個案管理，統計並整理出來，這些都是我們第一步要做的事情。」陸以愷表示，社區內失智人口還在統計中，未來會在管委會的協助下，配合宣導和志工培訓以儘快統計出確切的失智人口數。
+              <audio id="music1" src="audio/中山里里長.mid" ></audio> 
+              <a href="javascript:playPause1();"><img src="img/speaker.png" width="48" height="50" id="music_btn1"></a>
+            </div>
+          </div>
+        </div>
+        <div id="yng-r-p2" ng-class="{'show':tab==2}" class="yng-r">
+          <div id="yng-p2" class="yng-p"></div>
+          <!-- <div id="yng-author-p2" class="yng-author">
+            <div class="ib">
+              <div></div>
+              <div></div>
+            </div>
+            <div class="yng-author-mic"></div>
+          </div> -->
+          <div id="yng-d-p2" class="detail">
+            <div class="ib">
+              隨著失智人口年年攀升，長期照護勢在必行。除了台灣的湯泉失智友善社區，早在2009年，荷蘭阿姆斯特丹市打造了一座名為「霍格威村」的失智老人專屬營利性養老院。<br>　
+              那麼，台灣為何會選擇在社區實踐失智友善理念，而非養護中心形式？對此，天主教失智老人基金會社工主任陳俊佑說，「當然是社區，因為基本上個案是住在社區，第二就是沒有經費可以選擇做像是霍格威村的單位。」<br>　
+              在台灣，選擇社區形式有諸多的優勢，華人喜愛互幫互助，鄰里親如一家，而台灣政府多年以來也鼓勵社區創造自己的特色文化，加之，在地養老能夠讓老人留在熟悉的環境中生活，減少焦慮和不安，更適合失智症的治療。但陳俊佑也指出，失智友善社區若要長遠，仍需要從軟、硬體上面做出改善。<br>　
+              在硬體方面，由於大部分社區開放性空間，不像失智村有明確的界線，所以社區內必須配套嚴格的防走失系統，「這其實是重要的思考，」，陳俊佑強調，「不然新聞常常會有失智老人走失，走失後就死掉或是什麼樣的事件發生。」<br>　
+              而在軟體方面，無論是社區裡的商家、志工，或是家屬都需要接受專業的培訓。為了協助湯泉，基金會在社區舉辦志工訓練，宣導失智症相關知識，而湯泉未來若能成功申請成為C級巷弄長照站，他們也承諾提供進一步的培訓輔助。<br>　
+              相比養老院，在失智友善社區內還有其他社會資源可以利用，例如社區失智共照以及據點。而家人的陪伴也扮演重要的角色，陳俊佑表示，「我們現在都會辦一些家庭照顧者的訓練班，家人要陪伴失智長輩是需要有足夠的資訊，不僅是知識上的陪伴以及資源上的運用。」<br>
+              未來台灣若想擴大推廣失智友善社區，則必須考慮到每個社區的特殊情況，陳俊佑表示，「我們今年有可能會協助衛生局舉辦一些論壇，鼓勵更多社區參與，可能也會有更多不同的模式出現。」
+              <audio id="music2" src="audio/社工主任刪減版.mid" ></audio> 
+              <a href="javascript:playPause2();"><img src="img/speaker.png" width="48" height="50" id="music_btn2"></a>
+            </div>
+          </div>
+        </div>
+        <div id="yng-r-p3" ng-class="{'show':tab==3}" class="yng-r">
+          <div id="yng-p3" class="yng-p"></div>
+          <!-- <div id="yng-author-p3" class="yng-author">
+            <div class="ib">
+              <div></div>
+              <div></div>
+            </div>
+            <div class="yng-author-mic"></div>
+          </div> -->
+          <div id="yng-d-p3" class="detail">
+            <div class="ib">
+              新北市衛生局2015年起在板橋、新店、三峽、淡水、新莊等7區推廣瑞齡學堂，為失智長者提供懷舊、認知、藝術等5類課程，並為失智症者家屬提供照護技巧、壓力抒發等課程，降低失智症對個人及家庭的衝擊。<br>
+              然而，社會對失智症仍有錯誤的刻板印象，「大家自己的痛都不太敢跟別人講，都是默默在承受」，新北市衛生局心長科視察吳玉鳳坦言，這些觀念不僅讓患者處於恐慌和焦慮，無形中也增加了家庭照顧者的心理壓力，導致許多患者的病情仍處於不敢公開的陰影下。因此，消除失智症污名化迫在眉睫。<br>
+              於是，2016年起，新北市又進一步規劃結合社區與醫療資源。患者如想要獲得醫療端的協助，需要病患確診，而考慮到迫於社會壓力能夠走出家門，走進醫院的患者仍是少數，故採用失智友善社區加以輔助。<br>
+              失智友善社區希望借助社區鄰里互助的力量，衛生局協助提供教育訓練及宣導，讓居民更了解失智友善社區如何運作。在老齡人口高攀的當下，不少地區都意識到了失智問題的嚴重性，其實只要經過專業的宣導，改變居民對失智症的刻板印象並不難。<br>
+              為何選擇湯泉？吳玉鳳表示，不是衛生局選擇湯泉，而是湯泉社區主動爭取。「湯泉自己有在服務長輩，後來他們發現有長輩出現失智的情形，或是家屬不敢將失智家屬帶出來活動，所以他們才希望能做失智友善社區。」<br>
+              在計畫中，衛生局扮演居中媒合的角色，吳玉鳳認為，「讓社區自發覺得需要的是什麼，而我們會陪著他們一起討論看看是不是他們真的想要的」。社區在實踐中總結經驗，激發需求並向衛生局提出，而衛生局所要做的，就是積極提供資源上的協助。<br>
+              同時，衛生局也舉辦社區論壇，創建平台讓意見得以交換，2016年的新北市「失智症友善社區論壇暨開放空間會議」，其目的就在於引發社區新的思考，主動建立失智友善社區。面對未來，吳玉鳳說，「我們希望藉由在地化，而且是可以永續，可以自行繁衍的理念去扶持這樣的計畫」。
+              <audio id="music3" src="audio/衛生局刪減.mid" ></audio> 
+              <a href="javascript:playPause3();"><img src="img/speaker.png" width="48" height="50" id="music_btn3"></a>
+            </div>
+          </div>
+        </div>
+        <div id="yng-c-sep2"></div>
+        <div id="small-avatars">
+          <div data-anchor-target="#yng-c-sep" data-bottom-top="opacity:0" data-center-top="opacity:1" class="ib">
+            <div data-anchor-target="#yng-c-sep2" data-bottom-bottom="opacity:1" data-top-top="opacity:0" class="ib2">
+              <div ng-click="tomenu(1)" ng-class="{'active':tab==1}" class="avatar">
+                <div class="ib p1"><img src="img/dot.png"></div>
+              </div>
+              <div ng-click="tomenu(2)" ng-class="{'active':tab==2}" class="avatar">
+                <div class="ib p2"><img src="img/dot.png"></div>
+              </div>
+              <div ng-click="tomenu(3)" ng-class="{'active':tab==3}" class="avatar">
+                <div class="ib p3"><img src="img/dot.png"></div>
+              </div>
+              <div class="desc"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="cmp-sh" class="section-headline">
+        <div data-anchor-target="#cmp-sh" data-bottom-top="opacity:1;top:100%" data-100-top="opacity:1;top:0%" data-bottom-bottom="top:0%" data-top-bottom="top:-100%" class="main skrollable skrollable-before" style="opacity: 1; top: 100%;">
+          <div data-anchor-target="#cmp-sh" data-bottom-bottom="margin-left:40%" data-center-center="margin-left:20%" class="redline skrollable skrollable-before" style="margin-left: 20%;"></div>
+          <div id="part3" class="anchor"></div>
+          <div class="ib">
+            <div id="clock"><img id="clock-base" src="img/divider_bar/earth.svg" style="width:140px; height: 140px;"></div>
+            <div class="l4w"></div>
+            <div class="title">讓遺忘不遺憾</div>
+            <div class="part">從荷蘭失智村到台灣失智友善社區</div>
+          </div>
+          <div data-anchor-target="#cmp-sh" data-bottom-bottom="margin-left:0%" data-center-center="margin-left:20%" class="redline skrollable skrollable-before" style="margin-left: 20%;"></div>
+        </div>
+      </div>
+
+      <div style="text-align: center;font-size: 20px;padding-right: 12%;padding-left: 12%">
+        失智村的概念起源於荷蘭。<br>
+        這部分裡，我們透過台灣與荷蘭的對比，看友善失智社區是如何依據台灣的實情，從失智村調<br>
+        整成現在的社區型態。<br>
+        以湯泉為起點，未來，期待失智友善社區將逐步擴展到台灣的每個角落。<br>
+      </div>
+      
+      <div style="width: 100%; text-align: center;">  
+        <img src="img/hola/HOLA1.png" style="width: 730px;height: 500px;"><br>
+      </div>
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 24px;line-height: 2.2em;">
+        <b>遺忘者與騙子的小鎮—霍格威村</b>
+      </div>
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 20px; ;line-height: 2.2em;">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;荷蘭威斯普（Weesp）的霍格威村（De Hogeweyk）洋溢濃郁歐洲風情和人文特色，乍看之下，就像尋常的歐洲小鎮。然而，仔細觀察會發現霍格威村四周聳立著高牆，阻隔外界。因為這裡的居民，全都是失智症患者。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://store.gvm.com.tw/article_content_25941.html">遠見雜誌</a>曾介紹，霍格威村是全球第一座失智村，病患一旦入住，將會在此度過餘生。它和其他失智養護機構最大差別，在於能讓患者過著跟失智之前一樣正常的生活。無論是超市收銀員、咖啡店服務生等，皆非普通服務人員，而是專業失智症照護員，這些「騙子」懂得如何與「遺忘者」打交道。
+        </p>
+      </div><br>
+
+      <div style="width: 100%; text-align: center;">
+      <img src="img/hola/HOLA2.png" style="width: 730px;height: 500px;"><br>
+      </div>
+
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 24px;line-height: 2.2em;">
+        <b>美麗的謊言 失智長者烏托邦</b>
+      </div>
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 20px; ;line-height: 2.2em;">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;近年來，歐美地區逐漸興起一種新形態的老年失智照護機構，希望讓失智症患者盡量生活在正常的環境中。失智村的構想大約在西元1992年提出，但是直到西元2009年底，霍格威失智村完成所有的設施，才引起各界注意。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.storm.mg/lifestyle/42579">風傳媒</a>曾介紹，這座安全的「城市」，擁有戲院、郵局、超市、餐廳、理髮店等設施，和其他城市沒兩樣。約有250名照護人員與社工二十四小時假扮成各種身分，像是園丁、超市人員，讓失智症患者過著和過去一樣的生活。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;霍格威村還有25個社團，讓他們依自己的興趣去學習。患者自由選擇家庭成員，每個「家庭」配有照護者。房間也依患者要求設計，就是希望讓老人們住起來有家的感覺。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.familycare.org.tw/news/9777">中華民國家庭照顧者關懷總會</a>認為，這種經過精心設計的生活，令人聯想到電影<a href="https://zh.wikipedia.org/wiki/%E6%A5%9A%E9%96%80%E7%9A%84%E4%B8%96%E7%95%8C">楚門的世界</a>。戲中金凱瑞飾演的楚門，生活在巨大攝影棚內的「海景鎮」，生活點滴全都是安排好的情節，主角卻一直渾然未知。</p>
+      </div>
+
+      <div style="width: 100%; text-align: center;">
+      <img src="img/hola/HOLA3.png" style="width: 730px;height: 500px;"><br>
+      </div>
+
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 24px;;line-height: 2.2em;"><b>大成本小受眾　台灣負擔不起</b></div>
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 20px;line-height: 2.2em;">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;為何台灣不推行「失智村」計畫，<a href="http://www.commonhealth.com.tw/blog/blogTopic.action?nid=1731">康健雜誌</a>表示，失智村投資金額約新台幣近7億元，依據特殊醫療費用支出法，由荷蘭醫療保險做為長照支付，政府預算支出約新台幣6億5000萬元，另外贊助、基金、捐款約新台幣5千400萬元，作為運作費用，但政府每年仍要補助。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;在霍格威村，每月費用約新台幣25萬元，雖然荷蘭政府是由醫療保險做為長照支付，也會給予不同程度的補貼，但每月自付額仍要新台幣約15萬6千元。這裡只收容需要24小時照料的重度失智老人，共計152名居民，平均每位住民成本約新台幣500萬元。<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;新北市衛生局心理衛生及長期照顧科表示，失智村的成立需要大量專業看護人力的投入，整個失智村的設置，在荷蘭當地主要也是示範作用。台灣由於人力、經費的限制，並不建議仿效高投入、高人力的失智村設施，故採取在地安養失智長者的策略。
+</p>
+      </div>
+      <div style="width: 100%; text-align: center;">
+      <img src="img/hola/HOLA4.jpg" style="width: 730px;height: 500px;"><br>
+      </div>
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 20px;line-height: 2.2em;">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.commonhealth.com.tw/blog/blogTopic.action?nid=1731">康健雜誌</a>專欄作家伊佳奇認為，高經費投入是台灣和荷蘭間決定性的差異。前政務委員馮燕表示，若要推動失智村，台灣需要長期保險的支持。換算荷蘭失智村的經費，一年至少投入7億新台幣去照護152名失智者，爭議可想而知。因此，失智友善社區才是台灣較可行的方案。
+        </p>
+      </div>
+
+      <div id="land-main-hl">
+        <div class="ib">
+          <div class="ib2">未來展望</div>
+        </div>
+      </div>
+
+      <div style="width: 100%; text-align: center;">
+      <img src="img/future/f1.JPG" style="width: 730px;height: 500px;"><br>
+      </div>
+
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 20px;line-height: 2.2em;">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;隨著失智人口的增加與社會對於長照議題的逐步重視，長照服務開始受到政策支持。自2016年12月由新北市政府主導的友善社區論壇開始，再到湯泉社區於2017年4月的正式啟動，「友善社區」的計畫還有相當長遠的路途需要觀察與適應。</p>
+      </div>
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 24px;;line-height: 2.2em;">
+        <b>推估可行範圍  打造共照網絡</b>
+      </div>
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 20px;line-height: 2.2em;">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;新北市衛生局長照科視察員吳玉鳳表示，今年四月新北市政府與七家醫院的合作，搭造<a href="https://udn.com/news/story/7266/2358810">共照網絡</a>。當前主要任務在於快速確認個案資料，以方便照護資源的投入與長期追蹤，湯泉社區將作為新北共照網絡29區的參照基準。<br>&nbsp;&nbsp;&nbsp;&nbsp;除了湯泉社區，接下來將從人口較多的板橋、中和、永和地區開始推動。另外蘆洲因為之前在<a href="http://smart.health.pccu.edu.tw/healthycity_taipei2/elder2_1.html">健康城市</a>計畫中表現良好，也預期投入計畫範圍之內。下一步則會包含淡水、汐止等城市機能較佳的地區。期望在後期階段，沿海資源較不足一如石門、金山等地也可以受惠。
+        </p>
+      </div>
+
+      <div style="width: 100%; text-align: center;">
+      <img src="img/future/f2.png" style="width: 730px;height: 500px;"><br>
+      </div>
+
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 24px;;line-height: 2.2em;">
+        <b>打破認知同溫層  以動畫推動正確觀念</b>
+      </div>
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 20px;line-height: 2.2em;">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;友善社區的推行理念包含去除失智者汙名化，吳玉鳳說：「在台灣仍有部分民眾會將失智症視為被『魔神仔』勾走了靈魂，近年更因電影<a href="https://zh.wikipedia.org/wiki/%E7%B4%85%E8%A1%A3%E5%B0%8F%E5%A5%B3%E5%AD%A9_(%E9%9B%BB%E5%BD%B1)">紅衣小女孩</a>的渲染，讓失智症多了許多負面包袱。」<br>&nbsp;&nbsp;&nbsp;&nbsp;衛生局希望藉由打破資訊的同溫層，讓所有年齡階級都能了解失智者的痛。將來會透過宣導，希望教育學子能夠正向看待失智失能者，才能更加了解彼此的痛。衛生局目前考慮與動畫「<a href="https://www.youtube.com/watch?v=9WIf7iKwuuo">阿麼妮</a>」的團隊進行合作，該團隊已推出一系列的長者照護介紹影片。希望能用動畫的形式，教育年輕一代應對失智長者的正確態度和方法。
+        </p>
+      </div>
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 24px;;line-height: 2.2em;">
+        <b>因地制宜、互助支援的治本方案</b>
+      </div>
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 20px;line-height: 2.2em;">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;雖說推行還不久，但2016年12月論壇的與談者仍保持著參與的熱度，並分享了實際改善長者照護的許多經驗。比如家屬將長者身上的布標、掃描code裝扮成漂亮的飾品，避免長者會因為不耐而將它們扯落。<br>&nbsp;&nbsp;&nbsp;&nbsp;衛生局本身在計畫成立後，也會繼續扮演社區和醫療機構之間的媒合角色。友善社區計畫中的29塊區域除為「去汙名化」繼續做出宣導、並對友善認證商家做出在職訓練外，也會在2017年年底投入<a href="https://www.taiwanjobs.gov.tw/Internet/Index/List.aspx?uid=1583&pid=225">培力計畫</a>的訓練。意指由在地社區提出屬於符合自身社區條件的長照專案計畫，好方便社區向政府尋求經費資源。因為每一個社區都會有自己相符合的專案設計，比如眷村因1為社區布局較開放，老人容易走散，成立社區聯繫網的必要性就會大於封閉性足夠，有充分保全人力看管的社區。</p>
+      </div>
+
+      <div style="width: 100%; text-align: center;">
+      <img src="img/future/f3.JPG" style="width: 730px;height: 500px;"><br>
+      </div>
+
+      <div style="text-align: left ;margin-left: 12%;margin-right: 12%;font-size: 20px;line-height: 2.2em;">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;吳玉鳳說，希望社區之間將會變成資源互享的模式，透過區和區之間的經驗分享與自發性地提出在地專案，以避免當公務人員的專案一停止，社區本身也失去繼續前進的支援。藉由社區長照計畫的在地化發展與自行繁衍，以湯泉社區當作起點讓社區之間能夠彼此學習與支援。<br>　
+        &nbsp;&nbsp;&nbsp;&nbsp;由於計畫還在試行階段，新北市因屬於外來人口居多的縣市，許多長者也來自於南部地區，這些變因對計畫的成效會受到多少影響也仍在觀察中。
+        </p>
+      </div>
+      <div id="land-main-hl">
+        <div class="ib">
+          <div class="ib2">快問快答</div>
+        </div>
+      </div>
+      <iframe src="../QuestionGame/v/chart/13846" width="100%" height="900px" allowfullscreen="true" frameborder="0"></iframe>
+      <div style="font-size: 18px;text-align: center;">
+        <p>
+          謹以感謝以下單位<br>
+          新北市政府衛生局心理衛生及長期照顧科、湯泉櫻花社區管委會、中山里辦公室、天主教失智老人協會、動畫《阿麼妮》、G0V零時政府、Piktochart、icon、loading.io、ClickMe.net
+        </p>
+      </div>
+
+      <div id="tail-anchor"></div>
+
+      <div style="float: right;padding-right: 20%">
+        <div style="float: left;" class="block">
+          <a href="#part1" ><img src="img/hashtag/ht1.png" height="75" width="100"></a>
+          <!-- <div><img src="bout1.png" height="70" width="200"></div> -->
+        </div>  
+        <div style="float: left;" class="block">
+          <a href="#part2"><img src="img/hashtag/ht2.png" height="75" width="100"></a>
+          <!-- <div><img src="bout2.png" height="70" width="200"></div> -->
+        </div>           
+        <div style="float: left;" class="block">
+          <a href="#part3"><img src="img/hashtag/ht3.png" height="75" width="100"></a>
+          <!-- <div><img src="bout3.png" height="70" width="200"></div> -->
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var s = skrollr.init();
+    </script>
+  </body>
+
+<!-- Mirrored from 0media.tw/yslin/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 13 Jun 2017 03:50:28 GMT -->
+</html>

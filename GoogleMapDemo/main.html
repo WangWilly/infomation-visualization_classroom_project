@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Grandma Game</title>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #pano {
+        float: left;
+        height: 100%;
+        width: 100%;
+        cursor: move;
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pano"></div>
+    <img id="transition_img" src="img_src/transition_test.gif" style="width: 100%;height: 100%; position: absolute; z-index: 1; left: 0; visibility: hidden"/>
+
+    <div id="grandma_img" style="width: 100%;height: 75%; position: absolute; text-align: center;bottom: 0; z-index: 3; pointer-events: none;">
+      <img style="max-width: 100%; max-height: 100%; /*padding-right: 20%; padding-left: 20%;*/ opacity: 0.85" src="img_src/grandma.png"/>
+    </div>
+
+    <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <div style="width: 100%;height: 25%; position: absolute; text-align: center;bottom: 0; z-index: 5;">
+      <div style="height: 100%; /*padding-right: 28%; padding-left: 28%;*/">
+
+          <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+          <svg version="1.1" id="圖層_1" preserveAspectRatio="none" width="55%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 818.2 192.9" style="enable-background:new 0 0 818.2 192.9;" xml:space="preserve">
+          <style type="text/css">
+            .st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+            .st1{opacity:0.8;fill:#1E499D;}
+            .st2{opacity:0.85;fill:#3E3A39;}
+            .st3{fill:#FFFFFF;}
+            .st4{fill:none;}
+            .st5{stroke:#000000;stroke-miterlimit:10;}
+            .st6{font-family: Microsoft JhengHei;}
+            .st7{font-size:24px;}
+            #XMLID_423_:hover{fill:#FF3333;cursor: pointer;}
+          </style>
+          <path id="XMLID_427_" class="st0" d="M805.9,1.1H12.8c-6.6,0-12,5.4-12,12V181c0,6.6,5.4,12,12,12h793.2c6.6,0,12-5.4,12-12V13.1
+            C817.9,6.5,812.5,1.1,805.9,1.1z M810.6,173.6c0,6.6-5.4,12-12,12H20.4c-6.6,0-12-5.4-12-12V19.7c0-6.6,5.4-12,12-12h778.2
+            c6.6,0,12,5.4,12,12V173.6z"/>
+          <path id="XMLID_428_" class="st1" d="M794,8.1H15.8c-6.6,0-12,5.4-12,12V174c0,6.6,5.4,12,12,12H794c6.6,0,12-5.4,12-12V20.1
+            C806,13.5,800.6,8.1,794,8.1z"/>
+          <path id="XMLID_431_" class="st2" d="M798.2,7.5H20c-6.6,0-12,5.4-12,12v153.9c0,6.6,5.4,12,12,12h778.2c6.6,0,12-5.4,12-12V19.5
+            C810.2,12.9,804.8,7.5,798.2,7.5z M806.8,170.3c0,6.3-5.4,11.5-11.9,11.5H23.1c-6.5,0-11.9-5.2-11.9-11.5V22.5
+            c0-6.3,5.4-11.5,11.9-11.5h771.8c6.5,0,11.9,5.2,11.9,11.5V170.3z"/>
+          <polygon id="XMLID_423_" class="st3" points="768.5,166.1 774.3,156.2 780,146.2 768.5,146.2 757,146.2 762.8,156.2 "/>
+          <rect x="27.8" y="26.1" class="st4" width="715.6" height="140.7"/>
+          <text transform="matrix(1 0 0 1 27.7822 58.1379)">
+            <tspan id="text_1" x="0" y="0" class="st5 st6 st7">Loading...</tspan>
+            <tspan id="text_2" x="0" y="35" class="st5 st6 st7">Loading...</tspan>
+            <tspan id="text_3" x="0" y="70" class="st5 st6 st7">Loading...</tspan>
+            <tspan id="text_4" x="0" y="105" class="st5 st6 st7">　　　　　　　　　　　　　　　　　　　　　　　(點擊以繼續...)</tspan>
+          </text>
+          </svg>
+        </g>
+        </svg>
+      </div>
+    </div>
+
+    <div id="start" style="width: 100%;height: 100%;background-color: #000D29; opacity: 0.9; position: absolute; text-align: center; z-index: 10;">
+      <div style="height: 30%; width: 50%; top: 0; bottom: 0; left: 0; right: 0; position: absolute; color: #FFFFFF; font-family:Microsoft JhengHei; font-size: 48px; margin:auto auto auto auto;">這是一個小小的故事遊戲...你可以用滑鼠拖移畫面看看四周<br>(隨意點擊以繼續)</div>
+    </div>
+
+    <div id="end" style="width: 100%;height: 100%;background-color: #000D29; opacity: 0.9; position: absolute; text-align: center; z-index: 10; visibility: hidden;">
+      <div style="height: 30%; width: 50%; top: 0; bottom: 0; left: 0; right: 0; position: absolute; color: #FFFFFF; font-family:Microsoft JhengHei; font-size: 48px; margin:auto auto auto auto;">其實，這樣的失智長者迷路事件常發生......<br/>(往下繼續閱讀文章)</div>
+    </div>
+
+    <script>
+      /*
+       * Click the map to set a new location for the Street View camera.
+       */
+      var navigationlist = {
+        str1: [],
+        str2: [],
+        str3: [],
+        data: [],
+      };
+      navigationlist.str1.push("奶奶：少年仔...我要回家，但是我手腳不方便，你能扶我一下嗎？");
+      navigationlist.str2.push("　你：(扶起奶奶...) 好啊！那你要往哪裡走呢？");
+      navigationlist.str3.push("奶奶：咳咳... 丟係幾咧巷子");
+      navigationlist.data.push({lat: 25.0263804, lng: 121.4262974, heading: 158.64});
+      navigationlist.str1.push("奶奶：(拿著拐杖指著) 這個巷口要右... 左轉喔");
+      navigationlist.str2.push("　你：(疑惑..) 奶奶你確定嗎");
+      navigationlist.str3.push("奶奶：丟拉... 丟拉..");
+      navigationlist.data.push({lat: 25.0259134, lng: 121.4265928, heading: 114.99});
+      navigationlist.str1.push("(奶奶往前走到停車場裡，但是停車場門正要關起來)");
+      navigationlist.str2.push("　你：(疑惑的拉住奶奶) 奶奶這是你家門口嗎？怎麼要關起來了");
+      navigationlist.str3.push("奶奶：(恍惚的回答) 姆丟，拍謝剛剛想事情，右轉沒錯！");
+      navigationlist.data.push({lat: 25.0260757, lng: 121.4272215, heading: 133.04});
+      navigationlist.str1.push("(奶奶似乎有點慌張不確定要往哪裡走...)");
+      navigationlist.str2.push("　你：(扶著奶奶) 奶奶是左轉還是往前走");
+      navigationlist.str3.push("奶奶：往.....直..左..左拐");
+      navigationlist.data.push({lat: 25.0255925, lng: 121.4274295, heading: 114.5});
+      navigationlist.str1.push("奶奶：快到了！再往前走一點就到我家了");
+      navigationlist.str2.push("　你：(.....疑惑的看著奶奶..) ...是嗎？");
+      navigationlist.str3.push("");
+      navigationlist.data.push({lat: 25.0257642, lng: 121.4280371, heading: 91.56});
+      navigationlist.str1.push("(雖然走到了奶奶說的住處，可是發現奶奶遲遲沒有進去...)");
+      navigationlist.str2.push("　你：奶奶是這裡嗎？");
+      navigationlist.str3.push("奶奶：少年仔～哩係向？ (奶奶突然認不出少年了！！)");
+      navigationlist.data.push({lat: 25.0258966, lng: 121.4285372, heading: 22.53});
+
+
+      var button = document.getElementById('XMLID_423_');
+      var map;
+      var panorama;
+      var list_index = 0;
+      var max_index = 5;
+
+      function initMap() {
+        var sv = new google.maps.StreetViewService();
+        var initPlace = {
+          lat: navigationlist.data[0].lat, 
+          lng: navigationlist.data[0].lng
+        };
+        document.getElementById('start').addEventListener('click', function(event) {
+          event.preventDefault();
+          document.getElementById('start').style.visibility = "hidden";
+        });
+
+        panorama = new google.maps.StreetViewPanorama(
+          document.getElementById('pano'), {
+            linksControl: false,
+            panControl: false,
+            zoomControl: false,
+            addressControl: false,
+            fullscreenControl: false,
+            motionTrackingControl:false,
+            linksControl: false,
+            enableCloseButton: false,
+            disableDoubleClickZoom: true,
+            streetViewControl: false,
+            clickToGo: false,
+            scrollwheel: false,
+        });
+        // Set the initial Street View camera to the center of the map
+        sv.getPanorama({location: initPlace, radius: 50}, processSVData);
+
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+          document.getElementById('transition_img').style.visibility = "visible";
+
+          setTimeout(function() {
+            //your code to be executed after 1 second
+            var target = {
+              lat: navigationlist.data[list_index].lat, 
+              lng: navigationlist.data[list_index].lng
+            };
+            sv.getPanorama({location: target, radius: 50}, processSVData);
+            document.getElementById('transition_img').style.visibility = "hidden";
+          }, 1000);
+          if( list_index == max_index ) {
+            document.getElementById('text_4').innerHTML = "";
+            button.style.visibility = "hidden";
+            setTimeout(function() {
+              document.getElementById('end').style.visibility = "visible"; 
+            }, 6000);
+            
+          }
+        }, false);
+      }
+
+      function processSVData(data, status) {
+        if (status === 'OK') {
+          document.getElementById('text_1').innerHTML = navigationlist.str1[list_index];
+          document.getElementById('text_2').innerHTML = navigationlist.str2[list_index];
+          document.getElementById('text_3').innerHTML = navigationlist.str3[list_index];
+          panorama.setPano(data.location.pano);
+          panorama.setPov({
+            heading: navigationlist.data[list_index].heading,
+            pitch: 0,
+          });
+          panorama.setVisible(true);
+          list_index++;
+        } else {
+          console.error('Street View data not found for this location.');
+        }
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYDzCIvTxjs0coVS3kBt_4Khy9NEMKM4A&callback=initMap">
+    </script>
+  </body>
+</html>

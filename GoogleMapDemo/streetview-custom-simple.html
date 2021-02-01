@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Street View panoramas</title>
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <button id="gdma_fd">帶阿嬤向前走</button>
+    <div id="console"></div>
+    <script>
+      var navigationlist = {
+        name: [],
+        data:[]
+      };
+
+
+      var panorama;
+      var list_index = 0;
+      var button = document.getElementById('gdma_fd');//grandma_forword
+
+      function initPano() {
+        // //initial the initial screen.
+        // sv.getPanorama({location: {lat: 25.0214229, lng: 121.4243245}}, 
+        //   function(result, status) {
+        //     // document.getElementById("console").innerHTML = status;
+        //     if (status == 'OK') {
+        //       // Set up Street View and initially set it visible. Register the
+        //       // custom panorama provider function. Set the StreetView to display
+        //       // the custom panorama 'mypano' which we check for below.
+        //       panorama = new google.maps.StreetViewPanorama(
+        //         document.getElementById('map'), {
+        //           pano: 'mypano',
+        //           visible: true,
+        //           panoProvider: getCustomPanorama
+        //       });
+        //     }
+        //   });
+        panorama = new google.maps.StreetViewPanorama(
+          document.getElementById('map'), {
+            // linksControl: false,
+            // // panControl: false,
+            // zoomControl: false,
+            // addressControl: false,
+            // fullscreenControl: false,
+            // motionTrackingControl:false,
+            // linksControl: false,
+            // enableCloseButton: false,
+            // disableDoubleClickZoom: true,
+            // streetViewControl: false,
+            // clickToGo: false,
+            pano: 'mypano',
+            visible: true,
+            panoProvider: getCustomPanorama
+        });
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+          panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('map'), {
+              pano: 'mypano',
+              visible: true,
+              panoProvider: getCustomPanorama
+          });
+        }, false);
+      }
+
+      // Return a pano image given the panoID.
+      function getCustomPanoramaTileUrl(pano, zoom, tileX, tileY) {
+        // Note: robust custom panorama methods would require tiled pano data.
+        // Here we're just using a single tile, set to the tile size and equal
+        // to the pano "world" size.
+        return 'img_src/1.jpg';
+      }
+
+      // Construct the appropriate StreetViewPanoramaData given
+      // the passed pano IDs.
+      function getCustomPanorama(pano, zoom, tileX, tileY) {
+        if (pano === 'mypano') {
+          return {
+            location: {
+              pano: 'mypano',
+              description: 'Willy Wang - mypano'
+            },
+            links: [],
+            // The text for the copyright control.
+            copyright: 'Imagery (c) 2010 Google',
+            // The definition of the tiles for this panorama.
+            tiles: {
+              tileSize: new google.maps.Size(1024, 512),
+              worldSize: new google.maps.Size(1024, 512),
+              // The heading in degrees at the origin of the panorama
+              // tile set.
+              centerHeading: 105,
+              getTileUrl: getCustomPanoramaTileUrl
+              // getTileUrl: 'img_src/1.jpg',
+            }
+          };
+        }
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYDzCIvTxjs0coVS3kBt_4Khy9NEMKM4A&callback=initPano">
+    </script>
+  </body>
+</html>
